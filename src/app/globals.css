@@ -1,33 +1,74 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.validationError {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, #e2c4fa 0%, #d1e5ff 100%);
+  background-repeat: no-repeat;
+  margin: 1vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav-user-name {
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.nav-user-email {
+  padding-top: 0px;
+  color: gray;
+  font-size: 12px;
+  font-style: oblique;
+  letter-spacing: 0.3px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.todo-items {
+  margin-top: 8px !important;
+  font-size: 12px;
+  border-bottom: 1px dashed #e2e2e2;
+}
+.todo-desc {
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 1px;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.todo-values {
+  font-size: 12px;
+  font-weight: 100;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 1px;
+}
+
+.todo-edit-icon {
+  font-size: 12px;
+  color: #f5f5f5;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.todo-delete-icon {
+  font-size: 12px;
+  color: #f5f5f5;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.todo-list {
+  width: 600px;
+  margin: auto;
 }
