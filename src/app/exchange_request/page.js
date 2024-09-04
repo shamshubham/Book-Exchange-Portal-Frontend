@@ -22,7 +22,7 @@ const ExchangeRequest = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "http://localhost:3000/api/v1/exchange/exchange-requests",
+        "https://book-exchange-portal-backend.onrender.com/api/v1/exchange/exchange-requests",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -61,7 +61,7 @@ const ExchangeRequest = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.post(
-        `http://localhost:3000/api/v1/exchange/${requestId}`,
+        `https://book-exchange-portal-backend.onrender.com/api/v1/exchange/${requestId}`,
         {
           status: status,
         },

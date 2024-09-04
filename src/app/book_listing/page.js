@@ -2,7 +2,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Modal from "../components/Modal";
-// import AddTodo from "../components/AddTodo";
 import OwnBookList from "../components/OwnBooksList";
 import { toast } from "react-toastify";
 import Nav from "../components/Nav";
@@ -24,11 +23,14 @@ const BookListing = () => {
     try {
       const token = localStorage.getItem("authToken");
 
-      const response = await axios.get("http://localhost:3000/api/v1/books", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const response = await axios.get(
+        "https://book-exchange-portal-backend.onrender.com/api/v1/books",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
       console.log(response);
       if (response.status === 200) {
         setBookListing(response.data.data);
@@ -62,7 +64,7 @@ const BookListing = () => {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.delete(
-        `http://localhost:3000/api/v1/books/${id}`,
+        `https://book-exchange-portal-backend.onrender.com/api/v1/books/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

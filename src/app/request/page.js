@@ -21,7 +21,7 @@ const Request = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "http://localhost:3000/api/v1/exchange",
+        "https://book-exchange-portal-backend.onrender.com/api/v1/exchange",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ const Request = () => {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.delete(
-        `http://localhost:3000/api/v1/exchange/${id}`,
+        `https://book-exchange-portal-backend.onrender.com/api/v1/exchange/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

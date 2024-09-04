@@ -20,7 +20,7 @@ const BookDiscovery = () => {
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.get(
-        `http://localhost:3000/api/v1/books/search?title=${searchTitle}&author=${searchAuthor}&genre=${searchGenre}`,
+        `https://book-exchange-portal-backend.onrender.com/api/v1/books/search?title=${searchTitle}&author=${searchAuthor}&genre=${searchGenre}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

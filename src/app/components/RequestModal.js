@@ -35,7 +35,7 @@ export default function RequestModal({
       const token = localStorage.getItem("authToken");
       console.log(requestMessage, bookId);
       const response = await axios.post(
-        "http://localhost:3000/api/v1/exchange",
+        "https://book-exchange-portal-backend.onrender.com/api/v1/exchange",
         {
           note: requestMessage,
           bookId: bookId,

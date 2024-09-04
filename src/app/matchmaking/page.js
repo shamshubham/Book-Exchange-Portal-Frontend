@@ -23,7 +23,7 @@ const Matchmaking = () => {
       const token = localStorage.getItem("authToken");
 
       const response = await axios.get(
-        "http://localhost:3000/api/v1/books/matchmaking",
+        "https://book-exchange-portal-backend.onrender.com/api/v1/books/matchmaking",
         {
           headers: {
             Authorization: `Bearer ${token}`,

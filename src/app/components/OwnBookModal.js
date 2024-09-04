@@ -42,7 +42,7 @@ export default function OwnBookModal({
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.post(
-        "http://localhost:3000/api/v1/books",
+        "https://book-exchange-portal-backend.onrender.com/api/v1/books",
         {
           title: bookTitle,
           author: bookAuthor,
@@ -88,7 +88,7 @@ export default function OwnBookModal({
     try {
       const token = localStorage.getItem("authToken");
       const response = await axios.put(
-        `http://localhost:3000/api/v1/books/${editBook._id}`,
+        `https://book-exchange-portal-backend.onrender.com/api/v1/books/${editBook._id}`,
         {
           title: bookTitle,
           author: bookAuthor,
